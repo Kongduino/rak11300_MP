@@ -2,7 +2,7 @@
 
 Micropython environment for the RAK11300 (rp2040).
 
-There's a [recent compile for RAK11300](https://github.com/mrpackethead/rak11300_micropython) by [user mrpackethead](https://github.com/mrpackethead/). Install this. After which, download / clone this repo and upload the files with Thonny (or ampy). The sensors are by default RAK's. Their I2C address can differ than the standard. *Caveat usor...* Here's an up-to-date list, fomr the `i2c_scan.py` file:
+There's a [recent compile for RAK11300](https://github.com/mrpackethead/rak11300_micropython) by [user mrpackethead](https://github.com/mrpackethead/). Install this. After which, download / clone this repo and upload the files with Thonny (or ampy). The sensors are by default RAK's. Their I2C address can differ than the standard. *Caveat usor...* Here's an up-to-date list, from the `i2c_scan.py` file:
 
 ```python
 knownDevices = {
