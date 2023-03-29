@@ -22,19 +22,19 @@ Note that support for rak12019 hasn't been implemented yet – it's a little mor
 
 ## Libraries
 
-* `aes_lib`		convenience wrapper around `cryptolib`.
-* `sx126x`		sx1261/2/8 LoRa library, from Github [user ehong](https://github.com/ehong-tl/micropySX126X). Modified and extend by me to work on rak11300.
-* `bme280`		bme280, by Paul Cunnane and Peter Dahlebrg. I am modifying it a little to match syntax of bme680 library. WIP.
+* `aes_lib`	convenience wrapper around `cryptolib`.
+* `sx126x`	sx1261/2/8 LoRa library, from Github [user ehong](https://github.com/ehong-tl/micropySX126X). Modified and extend by me to work on rak11300.
+* `bme280`	bme280, by Paul Cunnane and Peter Dahlebrg. I am modifying it a little to match syntax of bme680 library. WIP.
 * `bme680[i]`	Adafruit's bme680 library
 * `i2c_scan`	An I2C scanner that recognizes RAK sensors.
-* `lis3dh`		Port of an old RAK library for RAK4600
-* `lps22hb`		Very simple LPS22HB library
-* `lps33hb`		Very simple LPS33HB library
-* `opt3001`		OPT3001 light sensor library, converted from a C library
-* `pinout`		RAK11300 pin names to numbers
-* `sgp40`		SGP40 air quality sensor library, converted from a C library
+* `lis3dh`	Port of an old RAK library for RAK4600
+* `lps22hb`	Very simple LPS22HB library
+* `lps33hb`	Very simple LPS33HB library
+* `opt3001`	OPT3001 light sensor library, converted from a C library
+* `pinout`	RAK11300 pin names to numbers
+* `sgp40`	SGP40 air quality sensor library, converted from a C library
 * `voc_algorithm`	SGP40 algorithm implementation
-* `stc3x`		STC31 CO2 sensor library
+* `stc3x`	STC31 CO2 sensor library
 
 
 
