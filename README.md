@@ -18,7 +18,7 @@ knownDevices = {
 }
 ```
 
-Note that support for rak12019 hasn't been implemented yet – it's a little more complex.
+Note that support for rak12019 hasn't been implemented yet – it's a little more complex. Also, since BME devices often share the same IDs, I am implementing a scheme to read the device's ID and decide whether it's a BME680 or BME280. WIP.
 
 ## Libraries
 
