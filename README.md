@@ -42,3 +42,9 @@ Note that support for rak12019 hasn't been implemented yet – it's a little mor
 * `aes_lib`	has been refactored, and the `test_aes_lib.py` code rewritten as `test_aes.py`.
 * `nmea.py` library: NMEA sentences tokenizer and parser for the RAK1910 / RAK12500 GPS modules on UART. I2C may come later.
 * `BST.py` Binary Search Tree and simple example.
+
+
+![Outdoors_Setup](assets/Outdoors_Setup.jpg)
+
+![Screenshot](assets/Screenshot.jpg)
+
