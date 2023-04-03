@@ -9,11 +9,11 @@ knownDevices = {
   '0x18' : 'rak1904 proto / lis3dh', # proto is 0x18
   '0x19' : 'rak1904 / lis3dh',
   '0x2c' : 'rak12008 / stc31',
+  '0x42' : 'rak12500 / gnss',
   '0x76' : 'rak1906 / bme680',
   '0x59' : 'rak12047 / sgp40',
   '0x5c' : 'rak1902 / lps22hb',
   '0x44' : 'rak1903 / opt3001',
-  '0x5d' : 'rak12011 / lps33hw',
   '0x53' : 'rak12019 / ltr-390uv-01',
 }
 ```
@@ -36,5 +36,9 @@ Note that support for rak12019 hasn't been implemented yet – it's a little mor
 * `voc_algorithm`	SGP40 algorithm implementation
 * `stc3x`	STC31 CO2 sensor library
 
+## UPDATES
 
-
+* `i2c_scan` recognizes more devices.
+* `aes_lib`	has been refactored, and the `test_aes_lib.py` code rewritten as `test_aes.py`.
+* `nmea.py` library: NMEA sentences tokenizer and parser for the RAK1910 / RAK12500 GPS modules on UART. I2C may come later.
+* `BST.py` Binary Search Tree and simple example.

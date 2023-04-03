@@ -21,7 +21,7 @@ i2c = I2C(id = 1, scl = machine.Pin(PIN_WIRE_SCL), sda = machine.Pin(PIN_WIRE_SD
 
 # Variables for the sensors, installed or not
 hasBME680 = False
-hasBME280 = False # Not yet implemented
+hasBME280 = False
 bme = None
 hasSGP40 = False
 sgp40 = None
@@ -41,6 +41,13 @@ if rslt.count(0x76) == 1: # RAK1906
         print(" [√] BME680")
         bme = BME680_I2C(i2c, address=0x76)
         bme.sea_level_pressure = 1016.8
+        # You can change this via LoRa
+        # Send a JSON packet with 'cmd':'MSL:1006.3' inside, the rest will be ignored
+    elif ID == 0x60:
+        hasBME280 = True
+        print(" [√] BME280")
+        bme = BME280(i2c, address = 0x76)
+        bme.sea_level_pressure = 1013.25
         # You can change this via LoRa
         # Send a JSON packet with 'cmd':'MSL:1006.3' inside, the rest will be ignored
 

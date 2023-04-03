@@ -12,7 +12,6 @@ knownDevices = {
   '0x59' : 'rak12047 / sgp40',
   '0x5c' : 'rak1902 / lps22hb',
   '0x44' : 'rak1903 / opt3001',
-  '0x5d' : 'rak12011 / lps33hw',
   '0x53' : 'rak12019 / ltr-390uv-01',
 }
 

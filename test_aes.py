@@ -15,7 +15,7 @@ randomBuff = sx.fillRandom(80)
 
 pKey = randomBuff[0:32]
 pIV = randomBuff[32:48]
-plaintext = randomBuff[48:80]
+plaintext = "this is a random sentence..."
 print("Key")
 hexDump(pKey)
 print("IV")
@@ -23,22 +23,12 @@ hexDump(pIV)
 print("Plaintext")
 hexDump(plaintext)
 
-encrypt = cbc_encryptor(pKey, pIV)
-decrypt = aes(pKey, 2, pIV)
-
-startTime = time.ticks_us()
-ciphertext = encrypt.encrypt(plaintext[0:16]) + encrypt.encrypt(plaintext[16:32])
-endTime = time.ticks_us()
-print("Encryption: {} µs".format(endTime-startTime))
-
-startTime = time.ticks_us()
-deciphered = decrypt.decrypt(ciphertext[0:16]) + decrypt.decrypt(ciphertext[16:32])
-endTime = time.ticks_us()
-print("Decryption: {} µs".format(endTime-startTime))
+encrypt = cbc_encryptor(pKey, pIV, plaintext)
+decrypt = cbc_decryptor(pKey, encrypt.ciphertext)
 
 print("ciphertext")
-hexDump(ciphertext)
+hexDump(encrypt.ciphertext)
 print("deciphered")
-hexDump(deciphered)
-print(deciphered == plaintext)
+hexDump(decrypt.plaintext)
+print(decrypt.plaintext[0:len(plaintext)].decode() == plaintext)
 
